@@ -24,14 +24,19 @@
     padding: 1em;
 }
 
-.container__botao:checked ~ .lista-menu {
-    display: block;
-}
-
 .lista-menu {
     display: none;
     position: absolute;
     top: 100%;
+    width: 60vw;
+}
+
+.container__botao:checked ~ .lista-menu {
+    display: block;
+}
+
+.container__botao { /*tira a vizualização de check */
+    display: none;
 }
 
 .lista-menu__titulo,
@@ -42,9 +47,14 @@
 
 .lista-menu__titulo {
     color: var(--laranja);
+    font-weight: 700;
 }
 
 .lista-menu__link {
-    text-decoration: none;
-    color: var(--azul-gradiante);
+    background: var(--azul-gradiante);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-weight: 400;
 }
