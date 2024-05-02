@@ -1,7 +1,7 @@
-const estudande = require('./estudante.json');
+import estudantes from './Estudantes.json';
 
 //Converte do formato JSON para String
-const stringEstudante = JSON.stringify(estudande);
+const stringEstudante = JSON.stringify(estudantes);
 
 console.log(stringEstudante);
 
